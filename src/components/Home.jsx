@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import video from "../assets/Tech.mp4";
+import logo from "../assets/TechprojectsLogo.png"
 import { ChevronLeft, ChevronRight, Play, ArrowRight, Youtube, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Home= () => {
@@ -33,11 +35,12 @@ const Home= () => {
        <nav className="fixed top-0 left-0  w-full z-50 bg-blue-800 shadow-md px-6 py-4 flex items-center justify-between">
        
        
-                 <div className="flex items-center">
-                   <div className="text-xl font-bold">TechProjects</div>
+                 <div className="flex">
+                  <div className="text-xl">
+                    <img src={logo}alt="TechProjects Logo" className="h-12 w-35" />
+                  </div>
                  </div>
                  <div className="hidden md:flex items-center space-x-8">
-                   {/* <a href="/about" className="hover:text-gray-300">About Us</a> */}
                     <Link to="/home" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
                     Home
                     </Link>
@@ -123,7 +126,7 @@ const Home= () => {
              <div className="relative group">
                <button
                  onClick={() => toggleDropdown("industries")}
-                 className="hover:text-gray-300 flex items-center"
+                 className="px-4 py-2 rounded hover:bg-red-600 flex items-center"
                >
                  Industries
                  <ChevronRight className="ml-1 w-4 h-4" />
@@ -189,7 +192,7 @@ const Home= () => {
                    <div className="relative group">
                <button
                  onClick={() => toggleDropdown("casestudies")}
-                 className="hover:text-gray-300 flex items-center"
+                 className="px-4 py-2 rounded hover:bg-red-600 flex items-center"
                >
                  Case Studies
                  <ChevronRight className="ml-1 w-4 h-4" />
@@ -238,14 +241,14 @@ const Home= () => {
                </div>
              </div>
                    {/* ======================================================== */}
-                   <Link to="/career" className="hover:text-gray-300">
+                   <Link to="/career" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Career
        </Link>
        
-                  <Link to="/ourclient" className="hover:text-gray-300">
+                  <Link to="/ourclient" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Blog/News
        </Link>
-                  <Link to="/contact" className="hover:text-gray-300">
+                  <Link to="/contact" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Contact
        </Link>
                    
@@ -274,11 +277,16 @@ const Home= () => {
               </div>
             </div>
             <div className="relative">
-              <img src="/api/placeholder/600/400" alt="Business woman working" className="rounded-lg" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-4 hover:bg-opacity-30">
-                  <Play className="w-8 h-8 text-white" />
-                </button>
+              <video 
+                   className="" 
+                    src={video} 
+                    controls 
+                    autoPlay 
+                    muted 
+                    loop
+                    />              
+                    <div >
+                
               </div>
             </div>
           </div>

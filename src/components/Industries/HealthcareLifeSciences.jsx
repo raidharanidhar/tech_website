@@ -2,6 +2,8 @@ import React from 'react';
 import { ChevronRight, Settings, Shield, Brain, Monitor, Cog, Truck, Star, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import logo from "../../assets/TechprojectsLogo.png"
+
 
 const HealthcareLifeSciences = () => {
    const [openDropdown, setOpenDropdown] = useState(null);
@@ -15,15 +17,17 @@ const HealthcareLifeSciences = () => {
        <nav className="fixed top-0 text-white left-0 w-full z-50 bg-blue-800 shadow-md px-6 py-4 flex items-center justify-between">
        
        
-                 <div className="flex items-center">
-                   <div className="text-xl font-bold">TechProjects</div>
+                 <div className="flex">
+                  <div className="text-xl">
+                    <img src={logo}alt="TechProjects Logo" className="h-12 w-35" />
+                  </div>
                  </div>
                  <div className="hidden md:flex items-center space-x-8">
                    {/* <a href="/about" className="hover:text-gray-300">About Us</a> */}
-                    <Link to="/home" className="hover:text-gray-300">
+                    <Link to="/home" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Home
        </Link>
-                   <Link to="/about" className="hover:text-gray-300">
+                   <Link to="/about" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          About Us
        </Link>
                    {/* <div className="relative group">
@@ -41,7 +45,7 @@ const HealthcareLifeSciences = () => {
                    <div className="relative group">
                <button
                  onClick={() => toggleDropdown("services")}
-                 className="bg-red-500 px-4 py-2 rounded hover:bg-red-600 flex items-center"
+                 className="px-4 py-2 rounded hover:bg-red-600 flex items-center"
                >
                  Services
                  <ChevronRight className="ml-1 w-4 h-4" />
@@ -105,7 +109,7 @@ const HealthcareLifeSciences = () => {
              <div className="relative group">
                <button
                  onClick={() => toggleDropdown("industries")}
-                 className="hover:text-gray-300 flex items-center"
+                 className="px-4 py-2 rounded hover:bg-red-600 flex items-center"
                >
                  Industries
                  <ChevronRight className="ml-1 w-4 h-4" />
@@ -171,7 +175,7 @@ const HealthcareLifeSciences = () => {
                    <div className="relative group">
                <button
                  onClick={() => toggleDropdown("casestudies")}
-                 className="hover:text-gray-300 flex items-center"
+                 className="px-4 py-2 rounded hover:bg-red-600 flex items-center"
                >
                  Case Studies
                  <ChevronRight className="ml-1 w-4 h-4" />
@@ -220,14 +224,14 @@ const HealthcareLifeSciences = () => {
                </div>
              </div>
                    {/* ======================================================== */}
-                   <Link to="/career" className="hover:text-gray-300">
+                   <Link to="/career" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Career
        </Link>
        
-                  <Link to="/ourclient" className="hover:text-gray-300">
+                  <Link to="/ourclient" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Blog/News
        </Link>
-                  <Link to="/contact" className="hover:text-gray-300">
+                  <Link to="/contact" className="px-4 py-2 rounded hover:bg-red-600 flex items-center">
          Contact
        </Link>
                    
